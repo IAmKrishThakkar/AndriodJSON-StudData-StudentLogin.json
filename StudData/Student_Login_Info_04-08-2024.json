@@ -1,0 +1,16 @@
+[
+    {
+        "stud_id": "1",
+        "stud_name": "Krish",
+        "roll_no": "266",
+        "stud_email": "k123@gmail.com",
+        "password": "TYB266"
+    },
+    {
+        "stud_id": "2",
+        "stud_name": "Raghav",
+        "roll_no": "205",
+        "stud_email": "r123@gmail.com",
+        "password": "TYB205"
+    }
+]
