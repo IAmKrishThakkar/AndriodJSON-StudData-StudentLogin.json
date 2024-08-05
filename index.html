@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="json-data">
+        <code id="json-content"></code>
+    </div>
+
+    <script>
+        // Function to fetch JSON data from the file
+        async function fetchJsonData() {
+            try {
+                const response = await fetch('StudentLogin.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                // Format the JSON data with indentation
+                document.getElementById('json-content').textContent = JSON.stringify(data, null, 4);
+            } catch (error) {
+                document.getElementById('json-content').textContent = 'Error loading JSON data: ' + error.message;
+            }
+        }
+
+        // Call the function to fetch and display the JSON data
+        fetchJsonData();
+    </script>
+</body>
+</html>
